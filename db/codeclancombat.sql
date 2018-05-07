@@ -1,16 +1,16 @@
-DROP TABLE battles;
+DROP TABLE fights;
 DROP TABLE players;
 
 CREATE TABLE players (
-  id SERIAL 4 PRIMARY KEY,
+  id SERIAL4 PRIMARY KEY,
   name VARCHAR,
   strength INT2,
-  skill INT2
+  ability INT2
 );
 
 CREATE TABLE fights (
   id SERIAL4 PRIMARY KEY,
-  player1_id REFERENCES players(id),
-  player2_id REFERENCES players(id),
-  
+  player1_id INT4 REFERENCES players(id),
+  player2_id INT4 REFERENCES players(id)
+
 );

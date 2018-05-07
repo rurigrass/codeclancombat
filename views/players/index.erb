@@ -1,10 +1,14 @@
 <h1>Players List</h1>
 
+
 <% for player in @players %>
-<p>Name = <%= player.name %></p>
-<p>Strength = <%= player.strength %></p>
-<p>Ability = <%= player.ability %></p>
-<p>Power = <%= player.power  %></p>
+<p>Name: <%= player.name %></p>
+<p>Strength: <%= player.strength %></p>
+<p>Ability: <%= player.ability %></p>
+<p>Power: <%= player.power  %></p>
 
 <hr/>
+
+<li><a href="/player_list/new">Add player</a></li>
+
 <% end %>
