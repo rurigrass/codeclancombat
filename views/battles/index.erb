@@ -4,5 +4,8 @@
 
 <% for battle in @battles %>
 <p> <%= battle.get_player1.name %> vs <%= battle.get_player2.name  %> </p>
+<p><%= battle.outcome  %> wins </p>
+
+<hr/>
 
 <% end %>

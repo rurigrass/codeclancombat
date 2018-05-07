@@ -10,7 +10,7 @@ CREATE TABLE players (
 
 CREATE TABLE battles (
   id SERIAL4 PRIMARY KEY,
-  player1_id INT4 REFERENCES players(id),
-  player2_id INT4 REFERENCES players(id),
+  player1_id INT4 REFERENCES players(id)ON DELETE CASCADE,
+  player2_id INT4 REFERENCES players(id)ON DELETE CASCADE,
   outcome VARCHAR(255)
 );
