@@ -19,4 +19,8 @@ class TestPlayer < MiniTest::Test
     assert_equal(7, @player.power())
   end
 
+  def test_save
+    assert_equal(2, @player.strength())
+  end
+
 end

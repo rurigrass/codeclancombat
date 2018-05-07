@@ -15,5 +15,18 @@ class Player
     @strength + @ability
   end
 
+  def save()
+    sql = "INSERT INTO players (name, strength, ability) VALUES ($1, $2, $3) RETURNING id"
+    values = [@name, @strength, @ability]
+    player_data = Sqlrunner.run(sql, values)
+    @id = player_data.first()['id'].to_i
+  end
+
+  def self.all()
+    sql = "SELECT * FROM players"
+    player_data = Sqlrunner.run(sql)
+    return player_data.map { |hash| Player.new(hash) }
+  end
+
 
 end
