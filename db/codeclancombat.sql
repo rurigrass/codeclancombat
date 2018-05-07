@@ -8,9 +8,8 @@ CREATE TABLE players (
   ability INT2
 );
 
-CREATE TABLE fights (
+CREATE TABLE battles (
   id SERIAL4 PRIMARY KEY,
   player1_id INT4 REFERENCES players(id),
   player2_id INT4 REFERENCES players(id)
-
 );

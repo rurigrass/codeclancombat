@@ -1,0 +1,26 @@
+<form action="/player_list/edit/<%= @player.id  %>" method="post">
+
+  <label for="player-name">Player name:</label>
+  <input type="text" name="name" id="player-name" value="<%= @player.name %>">
+
+  <label for="strength-select">Strength</label>
+  <select name="strength" id="strength-select">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+
+  <label for="ability-select">Ability</label>
+  <select name="strength" id="ability-select">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+
+  <input type="submit" value="Edit player">
+
+</form>

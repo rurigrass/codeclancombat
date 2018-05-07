@@ -1,0 +1,12 @@
+<p>Name: <%= @player.name %></p>
+<p>Strength: <%= @player.strength %></p>
+<p>Ability: <%= @player.ability %></p>
+<p>Power: <%= @player.power  %></p>
+
+<p><a href="/player_list"> Back </a></p>
+
+<p><a href="/player_list/edit/<%= @player.id  %>"> Edit </a></p>
+
+<form action="/player_list/delete/<%= @player.id %>" method="post">
+   <input type="submit" name="Delete" value="Delete Player">
+</form>

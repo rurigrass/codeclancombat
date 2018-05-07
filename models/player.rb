@@ -28,5 +28,27 @@ class Player
     return player_data.map { |hash| Player.new(hash) }
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM players WHERE id = $1"
+    values = [id]
+    player_data = SqlRunner.run(sql, values)
+    return Player.new(player_data.first)
+  end
+
+  def update()
+    sql = "UPDATE players SET
+    (name, strength, ability) =
+      ($1, $2, $3)
+      WHERE id = $4"
+      values = [@name, @strength, @ability, @id]
+      SqlRunner.run(sql, values)
+  end
+
+  def delete()
+    sql = "DELETE FROM players WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
 
 end
