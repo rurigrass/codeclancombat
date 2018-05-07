@@ -1,6 +1,7 @@
 require_relative('../db/sql_runner')
 
 class Player
+  
   attr_reader :id
   attr_accessor :name, :strength, :ability
 
