@@ -16,6 +16,7 @@ get '/battle_list/new' do
 end
 
 get '/battle_list/edit/:id' do
+  @battle = Battle.find(params[:id])
   @players = Player.all
   erb(:"battles/edit")
 end
@@ -31,21 +32,27 @@ post '/battle_list' do
   erb(:"battles/battle_added")
 end
 
-#UPDATE battle
+# UPDATE battle
 
-get "/battle_list/edit/:id" do
-  @battle = Battle.find(params[:id])
-  erb(:"battles/edit")
-end
 
-post "/battle_list/edit/:id" do
+
+post '/battle_list/edit/:id' do
   @battle = Battle.new(params)
   @battle.update
   redirect to '/battle_list'
 end
 
-#SHOW battle
+# SHOW battle
+
 get '/battle_list/:id' do
   @battle = Battle.find(params[:id])
   erb(:"battles/show")
+end
+
+# DELETE battle
+
+post '/battle_list/delete/:id' do
+  battle = Battle.find(params[:id])
+  battle.delete
+  redirect to '/battle_list'
 end

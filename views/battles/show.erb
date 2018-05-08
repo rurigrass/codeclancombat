@@ -4,8 +4,10 @@
 <p> winner: <%= @battle.get_player(@battle.outcome, "outcome").name  %> </p>
 
 
-
-
 <p><a href="/battle_list"> Back </a></p>
 
 <p><a href="/battle_list/edit/<%= @battle.id  %>"> Edit </a></p>
+
+<form action="/battle_list/delete/<%= @battle.id %>" method="post">
+   <input type="submit" name="Delete" value="Delete Battle">
+</form>
