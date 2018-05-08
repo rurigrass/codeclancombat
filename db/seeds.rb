@@ -27,5 +27,13 @@ battle1 = Battle.new({
 
   battle1.save()
 
+  battle2 = Battle.new({
+    "player1_id" => player1.id,
+    "player2_id" => player2.id,
+    "outcome" => player1.id
+    })
+
+    battle2.save()
+
 binding.pry
 nil

@@ -51,6 +51,14 @@ class Player
     SqlRunner.run(sql, values)
   end
 
+  def wins()
+    sql = "SELECT * FROM battles where (player1_id = $1 AND outcome = $1) or (player2_id = $1 AND outcome = $1)"
+    values = [@id]
+    battle_data = SqlRunner.run(sql, values)
+    result = battle_data.map { |battle| Battle.new(battle)}
+    return result.count
+  end
+
 
 
 end

@@ -64,4 +64,12 @@ def get_player(player_id, player_column)
 
 
 
+
+ def wins_list()
+   sql = "SELECT outcome, COUNT(outcome) FROM battles GROUP BY outcome ORDER BY COUNT DESC"
+   SqlRunner.run(sql, values)
+ end
+
+
+
 end
