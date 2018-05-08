@@ -23,4 +23,8 @@ class TestPlayer < MiniTest::Test
     assert_equal(2, @player.strength())
   end
 
+  def test_ability
+    assert_equal(5, @player.ability())
+  end
+
 end

@@ -9,6 +9,7 @@ require_relative('../models/player.rb')
     erb(:"players/index")
   end
 
+
 # CREATE player
   get '/player_list/new' do
     erb(:"players/new")

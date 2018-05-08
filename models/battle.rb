@@ -9,7 +9,7 @@ def initialize(options)
   @id = options['id'].to_i if options['id']
   @player1_id = options['player1_id'].to_i
   @player2_id = options['player2_id'].to_i
-  @outcome = options['outcome']
+  @outcome = options['outcome'].to_i
 end
 
 def save()
@@ -32,5 +32,36 @@ end
 def get_player2
   Player.find(@player2_id)
 end
+
+def get_player(player_id, player_column)
+   sql = "SELECT players.name FROM players
+   INNER JOIN battles ON players.id = battles.#{player_column}
+   WHERE players.id = $1"
+   values = [player_id]
+   player_hash = SqlRunner.run(sql, values)
+   player = Player.new(player_hash.first)
+   return player
+ end
+
+ def self.find(id)
+   sql = "SELECT * FROM battles WHERE id = $1"
+   values = [id]
+   battle_data = SqlRunner.run(sql, values)
+   return Battle.new(battle_data.first)
+ end
+
+ def update()
+   sql = "UPDATE battles SET (player1_id, player2_id, outcome) = ( $1, $2, $3 ) WHERE id = $4"
+   values = [@player1_id, @player2_id, @outcome, @id]
+   SqlRunner.run(sql, values)
+ end
+
+ def delete()
+   sql = "DELETE FROM battles WHERE id = $1"
+   values = [@id]
+   SqlRunner.run(sql, values)
+ end
+
+
 
 end

@@ -1,0 +1,11 @@
+
+<p> <%= @battle.get_player1.name %> vs <%= @battle.get_player2.name  %> </p>
+
+<p> winner: <%= @battle.get_player(@battle.outcome, "outcome").name  %> </p>
+
+
+
+
+<p><a href="/battle_list"> Back </a></p>
+
+<p><a href="/battle_list/edit/<%= @battle.id  %>"> Edit </a></p>

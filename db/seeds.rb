@@ -22,7 +22,7 @@ player2 = Player.new({
 battle1 = Battle.new({
   "player1_id" => player1.id,
   "player2_id" => player2.id,
-  "outcome" => player1.name
+  "outcome" => player1.id
   })
 
   battle1.save()

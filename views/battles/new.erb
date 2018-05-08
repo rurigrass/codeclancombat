@@ -1,0 +1,26 @@
+<form class="" action="/battle_list" method="post">
+
+  <label for="player1-select">player 1:</label>
+  <select name="player1_id" id="player1-select">
+    <% for player in @players %>
+      <option value="<%= player.id %>"><%= player.name %></option>
+  <% end %>
+  </select>
+
+  <label for="player2-select">player 2:</label>
+  <select name="player2_id" id="player2-select">
+    <% for player in @players %>
+      <option value="<%= player.id %>"><%= player.name %></option>
+  <% end %>
+  </select>
+
+<label for="outcome-select">Winner:</label>
+<select name="outcome" id="outcome-select">
+  <% for player in @players %>
+    <option value="<%= player.id  %>"><%= player.name  %></option>
+  <% end %>
+</select>
+
+<input type="submit" value="Add battle">
+
+</form>
