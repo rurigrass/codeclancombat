@@ -59,6 +59,13 @@ class Player
     return result.count
   end
 
+  def self.sort_by_wins
+    player_wins = self.all
+    sorted_players = player_wins.sort { |a, b| b.wins <=> a.wins
+    }
+    return sorted_players
+  end
+
 
 
 end

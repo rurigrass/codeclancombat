@@ -10,7 +10,7 @@ require_relative('../models/player.rb')
   end
 
   get '/player_list/highscores' do
-    @players = Player.all()
+    @sorted_players = Player.sort_by_wins
     erb(:"players/highscores")
   end
 
