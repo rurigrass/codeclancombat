@@ -67,7 +67,8 @@ def get_player(player_id, player_column)
      @outcome = @player1_id
    elsif get_player1().power() < get_player2().power()
      @outcome = @player2_id
-   else @outcome = @player1_id
+  else random = [@player1_id, @player2_id]
+     @outcome = random.sample()
    end
  end
 
