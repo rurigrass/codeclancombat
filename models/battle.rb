@@ -62,6 +62,14 @@ def get_player(player_id, player_column)
    SqlRunner.run(sql, values)
  end
 
+ def generate_result()
+   if get_player1().power() > get_player2().power()
+     @outcome = @player1_id
+   elsif get_player1().power() < get_player2().power()
+     @outcome = @player2_id
+   else @outcome = @player1_id
+   end
+ end
 
 
 
