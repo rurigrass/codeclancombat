@@ -25,7 +25,7 @@ tr:nth-child(odd) {
 
 .table{
   margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   margin-left: 50px;
   width: 50%;
   height: auto;
@@ -38,13 +38,14 @@ tr:nth-child(odd) {
 }
 
 input[type=submit] {
+    margin-top: 25px;
+    margin-left: 70px;
     padding:15px 25px;
     color:#dddddd;
     background:#ac452d;
     border-color:#5e1415;
     border-radius: 5px;
     font-size: 20px;
-    margin-left: 30px;
 }
 
 input[type=submit]:hover{
@@ -56,10 +57,22 @@ input[type=submit]:hover{
 }
 
 #background{
-  padding:15px 25px;
+  margin-left: 5%;
+  padding:15px 23px;
   color:#dddddd;
   background:#ac452d;
   border-color:#5e1415;
+  border-radius: 5px;
+  font-size: 22px;
+  width: 14%;
+}
+
+.settingsmenu{
+  margin-left: 15%;
+  margin-top: 10px;
+  padding:15px 25px;
+  color:#dddddd;
+  background:#ac452d;
   border-radius: 5px;
   font-size: 22px;
   width: 14%;

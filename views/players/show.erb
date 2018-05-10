@@ -1,14 +1,20 @@
 <link rel="stylesheet" type="text/css" href="/styles/table.css">
 
-<p>Name: <%= @player.name %></p>
-<p>Strength: <%= @player.strength %></p>
-<p>Ability: <%= @player.ability %></p>
-<p>Power: <%= @player.power  %></p>
-<p>Wins: <%= @player.wins  %></p>
+<div class="table">
+  <table>
+    <tr>
+<td>Name: <%= @player.name %></td>
+<td>Strength: <%= @player.strength %></td>
+<td>Ability: <%= @player.ability %></td>
+<td>Power: <%= @player.power  %></td>
+<td>Wins: <%= @player.wins  %></td>
+   </tr>
+ </table>
+</div>
 
-<p><a href="/player_list"> Back </a></p>
+<a id="background" href="/player_list"> Back </a>
 
-<p><a href="/player_list/edit/<%= @player.id  %>"> Edit </a></p>
+<a id="background" href="/player_list/edit/<%= @player.id  %>"> Edit </a>
 
 <form action="/player_list/delete/<%= @player.id %>" method="post">
    <input type="submit" name="Delete" value="Delete Player">
