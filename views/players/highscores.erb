@@ -1,11 +1,21 @@
+<link rel="stylesheet" type="text/css" href="/styles/table.css">
+
 <h1>Highscores</h1>
 
 <hr/>
 
+<div class="table">
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Wins</th>
+  </tr>
+
 <% for player in @sorted_players %>
-<p>Name: <%= player.name %></p>
-<p>Wins: <%= player.wins  %></p>
-
-<hr/>
-
+  <tr>
+    <td> <%= player.name %></td>
+    <td> <%= player.wins %></td>
+  </tr>
 <% end %>
+</table>
+</div>
