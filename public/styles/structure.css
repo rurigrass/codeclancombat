@@ -37,3 +37,12 @@ ul.topnav li a:hover {background-color: #5b0a0d;}
   width: 25%;
   float: right;
 }
+
+#fight{
+  background-color: #5e1415;
+}
+
+#fight:hover{
+  font-size: 20px;
+  background-color: green;
+}

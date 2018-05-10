@@ -30,3 +30,37 @@ tr:nth-child(odd) {
   width: 50%;
   height: auto;
 }
+
+.new{
+  margin-left: 75px;
+  margin-top: 75px;
+  font-size: 40px;
+}
+
+input[type=submit] {
+    padding:15px 25px;
+    color:#dddddd;
+    background:#ac452d;
+    border-color:#5e1415;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+input[type=submit]:hover{
+  background-color: #5e1415;
+}
+
+.margin-left{
+  margin-left: 60px;
+}
+
+#background{
+  padding:15px 25px;
+  color:#dddddd;
+  background:#ac452d;
+  border-color:#5e1415;
+  border-radius: 5px;
+  font-size: 22px;
+  width: 14%;
+}

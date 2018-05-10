@@ -12,12 +12,14 @@
   <tr>
     <th>Battle</th>
     <th>Winner</th>
+    <th>Edit</th>
   </tr>
 
 <% for battle in @battles %>
   <tr>
     <td> <%= battle.get_player1.name %> vs <%= battle.get_player2.name  %></td>
     <td> <%= battle.get_player(battle.outcome, "outcome").name %></td>
+    <td><a href="/battle_list/<%= battle.id %>"> Show </a></td>
   </tr>
 <% end %>
 </table>

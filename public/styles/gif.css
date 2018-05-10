@@ -1,0 +1,35 @@
+body {
+  background: url('/images/kungfupanda.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: papayawhip;
+  font-family: 'Merriweather', serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+p{
+  margin-left: 15%;
+  padding:15px 25px;
+  color:#dddddd;
+  background:#ac452d;
+  border-color:#5e1415;
+  border-radius: 5px;
+  font-size: 22px;
+  width: 22%;
+}
+
+.fightbutton{
+  margin-left: 15%;
+  padding:15px 25px;
+  color:#dddddd;
+  background:#ac452d;
+  border-color:#5e1415;
+  border-radius: 5px;
+  font-size: 22px;
+  width: 22%;
+}
+
+.fightbutton:hover{
+  background: #5e1415;
+}

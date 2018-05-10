@@ -2,31 +2,34 @@
 
 <div class="table">
 
-<form class="" action="/battle_list" method="post">
-
+<form class="new" action="/battle_list" method="post">
+<p>
   <label for="player1-select">player 1:</label>
   <select name="player1_id" id="player1-select">
     <% for player in @players %>
       <option value="<%= player.id %>"><%= player.name %></option>
   <% end %>
   </select>
-
+</p>
+<p>
   <label for="player2-select">player 2:</label>
   <select name="player2_id" id="player2-select">
     <% for player in @players %>
       <option value="<%= player.id %>"><%= player.name %></option>
   <% end %>
   </select>
-
+</p>
+<p>
 <label for="outcome-select">Winner:</label>
 <select name="outcome" id="outcome-select">
   <% for player in @players %>
     <option value="<%= player.id  %>"><%= player.name  %></option>
   <% end %>
 </select>
-
+</p>
+<p>
 <input type="submit" value="Add battle">
-
+</p>
 </form>
 
 </div>
