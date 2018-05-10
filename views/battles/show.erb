@@ -1,3 +1,8 @@
+<link rel="stylesheet" type="text/css" href="/styles/table.css">
+
+<div class="table">
+
+</div>
 
 <p> <%= @battle.get_player1.name %> vs <%= @battle.get_player2.name  %> </p>
 
@@ -11,3 +16,5 @@
 <form action="/battle_list/delete/<%= @battle.id %>" method="post">
    <input type="submit" name="Delete" value="Delete Battle">
 </form>
+
+</div>

@@ -1,14 +1,32 @@
+<link rel="stylesheet" type="text/css" href="/styles/table.css">
+
 <h1>Players List</h1>
 
-<li><a href="/player_list/new">Add Player</a></li>
-
 <hr/>
+
+<div class="table">
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Strength</th>
+    <th>Ability</th>
+    <th>Power</th>
+    <th>Stats</th>
+  </tr>
+
 
 <% for player in @players %>
-<p>Name: <%= player.name %></p>
-<p><a href="/player_list/<%= player.id %>"> Show Stats </a></p>
+  <tr>
+    <td><%= player.name %></td>
+    <td><%= player.strength %></td>
+    <td><%= player.ability %></td>
+    <td><%= player.power %></td>
+    <td><a href="/player_list/<%= player.id %>"> Show </a></td>
+  </tr>
+<% end %>
+</table>
+</div>
 
 <hr/>
 
-
-<% end %>
+<li><a href="/player_list/new">Add Player</a></li>
